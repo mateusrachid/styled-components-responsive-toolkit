@@ -1,4 +1,4 @@
-export function pxToRem(pxValue){
+function pxToRem(pxValue){
   return `${(parseFloat(pxValue)/16).toFixed(3)}rem`;
 }
 function _pxToRemPlugin(context,content){
@@ -11,5 +11,10 @@ function _pxToRemPlugin(context,content){
   ));
 }
 
-export const pxToRemPlugin = Object.defineProperty(_pxToRemPlugin, 'name', { value: 'responsiveToolkitPxToRemPlugin' });
+const pxToRemPlugin = Object.defineProperty(_pxToRemPlugin, 'name', { value: 'responsiveToolkitPxToRemPlugin' });
+
+module.exports = {
+  pxToRem,
+  pxToRemPlugin,
+};
 

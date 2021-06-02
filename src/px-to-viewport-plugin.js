@@ -21,4 +21,4 @@ function _pxToViewportPlugin(context,content){
 
 const pxToViewportPlugin = Object.defineProperty(_pxToViewportPlugin, 'name', { value: 'responsiveToolkitPxToViewportPlugin' });
 
-export default pxToViewportPlugin;
+module.exports = pxToViewportPlugin;

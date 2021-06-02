@@ -18,4 +18,4 @@ function _mediaQueryPlugin(context,content){
 
 const mediaQueryPlugin = Object.defineProperty(_mediaQueryPlugin, 'name', { value: 'responsiveToolkitMediaQuery' });
 
-export default mediaQueryPlugin;
+module.exports = mediaQueryPlugin;
