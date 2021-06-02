@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+const { createGlobalStyle } = require("styled-components");
 
 const path = require('path');
 const { viewPortSizes,preserveAspectRatio } = require(path.join(__dirname, "../../../", "responsive-toolkit-config/viewport.js"));

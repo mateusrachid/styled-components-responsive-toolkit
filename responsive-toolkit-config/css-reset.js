@@ -1,4 +1,4 @@
-import { css } from "styled-components";
+const { css } = require("styled-components");
 
 const cssReset = () => css`
   *{

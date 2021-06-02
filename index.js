@@ -1,7 +1,7 @@
-import { Head as _Head } from "./src/Head";
-import mediaQueryPlugin from "./src/media-query-plugin";
-import { pxToRem as _pxToRem, pxToRemPlugin } from "./src/px-to-rem";
-import pxToViewportPlugin from "./src/px-to-viewport-plugin";
+const { Head: _Head } = require("./src/Head");
+const mediaQueryPlugin = require("./src/media-query-plugin");
+const { pxToRem: _pxToRem, pxToRemPlugin } = require("./src/px-to-rem");
+const pxToViewportPlugin = require("./src/px-to-viewport-plugin");
 
 export const plugins = [
   mediaQueryPlugin,
