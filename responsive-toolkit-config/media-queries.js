@@ -9,4 +9,4 @@ const mediaQueries = {
   retina_portrait: 'only screen and (max-aspect-ratio: 1/1) and (-webkit-min-device-pixel-ratio: 2.5),only screen and (min-resolution: 384dpi),only screen and (min-resolution: 2.5dppx)',
 };
 
-export default mediaQueries;
+module.exports = mediaQueries;

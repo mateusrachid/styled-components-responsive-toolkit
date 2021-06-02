@@ -69,4 +69,4 @@ const cssReset = () => css`
   .grecaptcha-badge { visibility: hidden; }
 `;
 
-export default cssReset;
+module.exports = cssReset;

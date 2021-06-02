@@ -44,7 +44,7 @@ const globalStyle = function(){
 
 const StyledComponentsGlobalStyle = createGlobalStyle`${cssReset}${fontFamily}${globalStyle}`;
 
-export const Head = ()=><>
+const Head = ()=><>
   {
     (fontImports()).map( (url,idx) => (
       <link key={idx} rel="stylesheet" href={url} />
@@ -52,3 +52,5 @@ export const Head = ()=><>
   }
   <StyledComponentsGlobalStyle/>
 </>;
+
+module.exports = Head;

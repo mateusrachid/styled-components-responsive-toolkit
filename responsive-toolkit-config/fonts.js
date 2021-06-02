@@ -1,4 +1,4 @@
-export const fontsInUse = [
+const fontsInUse = [
   {
     family: 'Montserrat',
     alternative: 'sans-serif',
@@ -20,8 +20,16 @@ export const fontsInUse = [
 ];
 
 
-export const primaryFontFamily = `'${fontsInUse[0].family}', ${fontsInUse[0].alternative}`;
-export const secondaryFontFamily = `'${fontsInUse[1].family}', ${fontsInUse[1].alternative}`;
+const primaryFontFamily = `'${fontsInUse[0].family}', ${fontsInUse[0].alternative}`;
+const secondaryFontFamily = `'${fontsInUse[1].family}', ${fontsInUse[1].alternative}`;
 
-export const defaultFontFamily = primaryFontFamily;
-export const defaultFontWeight = 400;
+const defaultFontFamily = primaryFontFamily;
+const defaultFontWeight = 400;
+
+module.exports = {
+  fontsInUse,
+  primaryFontFamily,
+  secondaryFontFamily,
+  defaultFontFamily,
+  defaultFontWeight,
+};
