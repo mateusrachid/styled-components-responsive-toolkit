@@ -1,4 +1,5 @@
 const { createGlobalStyle } = require("styled-components");
+const React = require("react");
 
 const path = require('path');
 const { viewPortSizes,preserveAspectRatio } = require(path.join(__dirname, "../../../", "responsive-toolkit-config/viewport.js"));
@@ -44,13 +45,30 @@ const globalStyle = function(){
 
 const StyledComponentsGlobalStyle = createGlobalStyle`${cssReset}${fontFamily}${globalStyle}`;
 
-const Head = ()=><>
-  {
-    (fontImports()).map( (url,idx) => (
-      <link key={idx} rel="stylesheet" href={url} />
-    ))
-  }
-  <StyledComponentsGlobalStyle/>
-</>;
+// const Head = ()=><>
+//   {
+//     (fontImports()).map( (url,idx) => (
+//       <link key={idx} rel="stylesheet" href={url} />
+//     ))
+//   }
+//   <StyledComponentsGlobalStyle/>
+// </>;
+
+const Head = ()=>(
+  React.createElement(
+    React.Fragment,
+    null,
+    fontImports().map((url, idx) => (
+      React.createElement(
+        "link",{
+          key: idx,
+          rel: "stylesheet",
+          href: url
+        }
+      )
+    )),
+    React.createElement(StyledComponentsGlobalStyle, null)
+  )
+);
 
 module.exports = Head;

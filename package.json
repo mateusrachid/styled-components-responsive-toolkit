@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/Webkorp-Team/styled-components-responsive-toolkit#readme",
   "peerDependencies": {
-    "styled-components": "^5.3.0"
+    "styled-components": "^5.3.0",
+    "react": "^17.0.0"
   }
 }
