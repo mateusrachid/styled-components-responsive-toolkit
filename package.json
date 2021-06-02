@@ -1,0 +1,30 @@
+{
+  "name": "styled-components-responsive-toolkit",
+  "version": "0.0.1",
+  "description": "Set of plugins for Styled Components to help built responsive components from design specs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "node ./postinstall.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Webkorp-Team/styled-components-responsive-toolkit.git"
+  },
+  "keywords": [
+    "styled-components",
+    "responsive",
+    "plugin",
+    "css",
+    "design"
+  ],
+  "author": "Mateus Rachid @ Webkorp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Webkorp-Team/styled-components-responsive-toolkit/issues"
+  },
+  "homepage": "https://github.com/Webkorp-Team/styled-components-responsive-toolkit#readme",
+  "peerDependencies": {
+    "styled-components": "^5.3.0"
+  }
+}
