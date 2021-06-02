@@ -12,8 +12,8 @@ const files = [
 ];
 
 for(const file of files){
-  const src = path.join("./",file);
-  const dst = path.join(__dirname,file);
+  const src = path.join(__dirname,file);
+  const dst = path.join(__dirname,"../../",file);
 
   console.log({src,dst});
   continue
