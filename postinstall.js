@@ -2,15 +2,27 @@ const fs = require('fs');
 const path = require('path');
 
 const files = [
-  "responsive-toolkit-config/media-queries.js",
-  "responsive-toolkit-config/fonts.js",
-  "responsive-toolkit-config/viewport.js",
-  "responsive-toolkit-config/css-reset.js",
+  "media-queries.js",
+  "fonts.js",
+  "viewport.js",
+  "css-reset.js",
 ];
 
+const srcDir = path.join(__dirname,"responsive-toolkit-config");
+const dstDir = path.join(__dirname,"../../responsive-toolkit-config");
+
+fs.mkdir(
+  dstDir,
+  {recursive: true},
+  (err) => {
+    if (err) 
+      throw err;
+  }
+);
+
 for(const file of files){
-  const src = path.join(__dirname,file);
-  const dst = path.join(__dirname,"../../",file);
+  const src = path.join(srcDir,file);
+  const dst = path.join(dstDir,file);
 
   fs.access(dst, (err) => {
     if(!err)
