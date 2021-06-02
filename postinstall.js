@@ -1,6 +1,3 @@
-
-console.log('---- postinstall ---')
-
 const fs = require('fs');
 const path = require('path');
 
@@ -15,9 +12,6 @@ for(const file of files){
   const src = path.join(__dirname,file);
   const dst = path.join(__dirname,"../../",file);
 
-  console.log({src,dst});
-  continue
-  
   fs.access(dst, (err) => {
     if(!err)
       return;
