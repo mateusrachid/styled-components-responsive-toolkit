@@ -1,6 +1,7 @@
 function pxToRem(pxValue){
   return `${(parseFloat(pxValue)/16).toFixed(3)}rem`;
 }
+
 function _pxToRemPlugin(context,content){
   if(context !== 1)
     return content;

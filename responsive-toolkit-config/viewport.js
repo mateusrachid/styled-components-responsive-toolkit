@@ -8,7 +8,7 @@ const pxToViewportAutoVhRatio = 1;
 
 const preserveAspectRatio = false;
 
-module.exports = {
+export default {
   viewPortSizes,
   pxToViewportAutoVhRatio,
   preserveAspectRatio,

@@ -19,7 +19,6 @@ const fontsInUse = [
   },
 ];
 
-
 const primaryFontFamily = `'${fontsInUse[0].family}', ${fontsInUse[0].alternative}`;
 const secondaryFontFamily = `'${fontsInUse[1].family}', ${fontsInUse[1].alternative}`;
 

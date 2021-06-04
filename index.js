@@ -1,19 +1,19 @@
-// const Head = require("./src/Head");
-// const mediaQueryPlugin = require("./src/media-query-plugin");
-// const { pxToRem, pxToRemPlugin } = require("./src/px-to-rem");
-// const pxToViewportPlugin = require("./src/px-to-viewport-plugin");
+const getGlobalStyles = require("styled-components-responsive-toolkit/src/global-styles");
+const getMediaQueryPlugin = require("./src/media-query-plugin");
+const { pxToRem, pxToRemPlugin } = require("./src/px-to-rem");
+const getPxToViewportPlugin = require("./src/px-to-viewport-plugin");
 
-// const plugins = [
-//   mediaQueryPlugin,
-//   pxToViewportPlugin,
-//   pxToRemPlugin,
-// ];
+module.exports = function init(config){
+  return {
+    pxToRem,
+    GlobalStyles: getGlobalStyles(config),
+    plugins:[
+      getMediaQueryPlugin(config),
+      getPxToViewportPlugin(config),
+      pxToRemPlugin,
+    ]
+  };
+};
 
-// module.exports = {
-//   plugins,
-//   pxToRem,
-//   Head,
-// };
 
-export const Head = ()=>null;
 
