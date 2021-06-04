@@ -2,7 +2,7 @@ const { createGlobalStyle } = require("styled-components");
 const React = require("react");
 
 const path = require('path');
-const { viewPortSizes,preserveAspectRatio } = require(path.join(__dirname, "../../../", "responsive-toolkit-config/viewport.js"));
+const { viewPortSizes,preserveAspectRatio } = require(path.join(__dirname, "../", "responsive-toolkit-config/viewport.js"));
 const { fontsInUse, defaultFontFamily, defaultFontWeight } = require(path.join(__dirname, "../../../", "responsive-toolkit-config/fonts.js"));
 const cssReset = require(path.join(__dirname, "../../../", "responsive-toolkit-config/css-reset.js"));
 
