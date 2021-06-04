@@ -1,5 +1,6 @@
 const path = require('path');
-const mediaQueries = require(path.join(__dirname, "../../../", "responsive-toolkit-config/media-queries.js"));
+const appRoot = require('app-root-path');
+const mediaQueries = require(path.join(appRoot, "responsive-toolkit-config/media-queries.js"));
 
 function _mediaQueryPlugin(context,content){
   if(context !== -1)

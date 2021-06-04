@@ -1,5 +1,6 @@
 const path = require('path');
-const { viewPortSizes } = require(path.join(__dirname, "../../../", "responsive-toolkit-config/viewport.js"));
+const appRoot = require('app-root-path');
+const { viewPortSizes } = require(path.join(appRoot, "responsive-toolkit-config/viewport.js"));
 
 function _pxToViewportPlugin(context,content){
   if(context !== 1)
