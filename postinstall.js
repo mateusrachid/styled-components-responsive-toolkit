@@ -8,8 +8,8 @@ const files = [
   "css-reset.js",
 ];
 
-const srcDir = path.join(__dirname,"responsive-toolkit-config");
-const dstDir = path.join(__dirname,"../../responsive-toolkit-config");
+const srcDir = path.join(__dirname,"config");
+const dstDir = path.join(__dirname,"../../src/css-config");
 
 fs.mkdir(
   dstDir,
