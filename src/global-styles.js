@@ -4,6 +4,7 @@ const React = require("react");
 module.exports = function getGlobalStyles(config){
   const { viewPortSizes,preserveAspectRatio } = config.viewport;
   const { fontsInUse, defaultFontFamily, defaultFontWeight } = config.fonts;
+  const mediaQueries = config.mediaQueries;
   const cssReset = config.cssReset;
 
   const fontImports = ()=>{
@@ -33,10 +34,10 @@ module.exports = function getGlobalStyles(config){
       if(name === 'default'){
         if(preserveAspectRatio)
           style += `@media (min-aspect-ratio:${viewPortSizes[name][0]}/${viewPortSizes[name][1]}){${fontSizeVh(name)}}`;
-      }else{
-        style += `@media ${name}{${fontSize(name)}}`;
+      }else if(mediaQueries[name]){
+        style += `@media ${mediaQueries[name]}{${fontSize(name)}}`;
         if(preserveAspectRatio)
-          style += `@media ${name} and (min-aspect-ratio:${viewPortSizes[name][0]}/${viewPortSizes[name][1]}){${fontSizeVh(name)}}`;
+          style += `@media ${mediaQueries[name]} and (min-aspect-ratio:${viewPortSizes[name][0]}/${viewPortSizes[name][1]}){${fontSizeVh(name)}}`;
       }
     }
 

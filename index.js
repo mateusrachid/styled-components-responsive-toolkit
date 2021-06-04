@@ -1,4 +1,4 @@
-const getGlobalStyles = require("styled-components-responsive-toolkit/src/global-styles");
+const getGlobalStyles = require("./src/global-styles");
 const getMediaQueryPlugin = require("./src/media-query-plugin");
 const { pxToRem, pxToRemPlugin } = require("./src/px-to-rem");
 const getPxToViewportPlugin = require("./src/px-to-viewport-plugin");
