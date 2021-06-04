@@ -1,6 +1,6 @@
 {
   "name": "styled-components-responsive-toolkit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Set of plugins for Styled Components to help built responsive components from design specs.",
   "main": "index.js",
   "scripts": {
