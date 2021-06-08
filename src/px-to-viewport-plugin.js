@@ -12,7 +12,7 @@ function getPxToViewportPlugin({viewport}){
       const value = parseFloat(pxValue);
       const sign = Math.sign(value);
       const vwValue = (value/viewPortSizes[s][0]*100).toFixed(3) + 'vw';
-      const vhValue = (value/viewPortSizes[s][1]*100*pxToViewportAutoVhRatio).toFixed(3) + 'vh';
+      const vhValue = (value/viewPortSizes[s][1]*100*viewport.pxToViewportAutoVhRatio).toFixed(3) + 'vh';
       const fun = sign < 0 ? 'max' : 'min';
       return `${fun}(${vwValue},${vhValue})`;
     });
