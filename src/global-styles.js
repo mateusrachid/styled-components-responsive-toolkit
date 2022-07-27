@@ -2,7 +2,7 @@ const { createGlobalStyle } = require("styled-components");
 const React = require("react");
 
 module.exports = function getGlobalStyles(config){
-  const { viewPortSizes,preserveAspectRatio } = config.viewport;
+  const { viewPortSizes, preserveAspectRatio, maxViewportSize } = config.viewport;
   const { fontsInUse, defaultFontFamily, defaultFontWeight } = config.fonts;
   const mediaQueries = config.mediaQueries;
   const cssReset = config.cssReset;
@@ -25,8 +25,8 @@ module.exports = function getGlobalStyles(config){
   const globalStyle = function(){
     var style = 'html{';
 
-    const fontSize = name => `font-size:${(100*16/viewPortSizes[name][0]).toFixed(2)}vw;`
-    const fontSizeVh = name => `font-size:${(100*16/viewPortSizes[name][1]).toFixed(2)}vh;`
+    const fontSize = name => `font-size:min(${(100*16/viewPortSizes[name][0]).toFixed(2)}vw,${(maxViewportSize[0]*16/viewPortSizes[name][0]).toFixed(2)}px);`;
+    const fontSizeVh = name => `font-size:min(${(100*16/viewPortSizes[name][1]).toFixed(2)}vh,${(maxViewportSize[1]*16/viewPortSizes[name][1]).toFixed(2)}px);`;
 
     style += fontSize('default');
 

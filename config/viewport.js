@@ -8,8 +8,11 @@ const pxToViewportAutoVhRatio = 1;
 
 const preserveAspectRatio = false;
 
+const maxViewportSize = [3840,2160];
+
 export default {
   viewPortSizes,
   pxToViewportAutoVhRatio,
   preserveAspectRatio,
+  maxViewportSize,
 };
